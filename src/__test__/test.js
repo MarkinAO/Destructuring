@@ -13,32 +13,31 @@ test('Test getSpecialAttacks', () => {
         id: 8,
         name: 'Двойной выстрел',
         icon: 'http://...',
-        description: 'Двойной выстрел наносит двойной урон'
-      }, 
+        description: 'Двойной выстрел наносит двойной урон',
+      },
       {
         id: 9,
         name: 'Нокаутирующий удар',
-        icon: 'http://...'
+        icon: 'http://...',
         // <- обратите внимание, описание "засекречено"
-      }
-    ]	
-  }
-  
-  let res = [
+      },
+    ],
+  };
+
+  const res = [
     {
       id: 8,
       name: 'Двойной выстрел',
       icon: 'http://...',
-      description: 'Двойной выстрел наносит двойной урон'
-    }, 
+      description: 'Двойной выстрел наносит двойной урон',
+    },
     {
       id: 9,
       name: 'Нокаутирующий удар',
       icon: 'http://...',
-      description: 'Описание недоступно'
-    }
-  ]
+      description: 'Описание недоступно',
+    },
+  ];
   expect(getSpecialAttacks(character)).toEqual(res);
   expect(() => getSpecialAttacks()).toThrow('Функция вызвана без объекта!');
 });
-
